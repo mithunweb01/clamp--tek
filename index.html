@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clamptek Chennai | Official Franchise</title>
+  <style>
+    :root{
+      --primary:#c4161c; /* Clamptek red tone */
+      --dark:#1f1f1f;
+      --light:#f5f5f5;
+    }
+    *{box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+    body{margin:0;background:var(--light);color:#333}
+    header{
+      background:var(--dark);
+      color:#fff;
+      padding:15px 40px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    header h1{margin:0;font-size:22px;letter-spacing:1px}
+    nav a{
+      color:#fff;
+      margin-left:20px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    nav a:hover{color:var(--primary)}
+
+    .section{padding:60px 40px}
+    .hero{
+      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://via.placeholder.com/1600x600');
+      background-size:cover;
+      color:#fff;
+      text-align:center;
+      padding:120px 40px;
+    }
+    .hero h2{font-size:42px;margin-bottom:10px}
+    .hero p{font-size:18px;max-width:800px;margin:auto}
+
+    h2.section-title{
+      text-align:center;
+      margin-bottom:40px;
+      color:var(--dark)
+    }
+
+    /* Products */
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+    .product-card{
+      background:#fff;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,.1);
+      perspective:1000px;
+    }
+    .product-inner{
+      position:relative;
+      width:100%;
+      height:320px;
+      transition:transform .8s;
+      transform-style:preserve-3d;
+    }
+    .product-card:hover .product-inner{transform:rotateY(180deg)}
+    .product-face{
+      position:absolute;
+      width:100%;
+      height:100%;
+      backface-visibility:hidden;
+      padding:20px;
+      border-radius:10px;
+    }
+    .product-front img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:8px;
+    }
+    .product-front h3{text-align:center;margin-top:15px}
+    .product-back{
+      background:var(--primary);
+      color:#fff;
+      transform:rotateY(180deg);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+    .product-back button{
+      background:#fff;
+      color:var(--primary);
+      border:none;
+      padding:10px 18px;
+      border-radius:20px;
+      font-weight:bold;
+      cursor:pointer;
+      margin-top:15px;
+    }
+
+    /* About */
+    .about-box{
+      max-width:900px;
+      margin:auto;
+      background:#fff;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,.1);
+      line-height:1.7;
+    }
+
+    /* Contact */
+    .contact{
+      background:var(--dark);
+      color:#fff;
+      text-align:center;
+    }
+
+    footer{
+      background:#000;
+      color:#aaa;
+      text-align:center;
+      padding:15px;
+      font-size:14px;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Clamptek Chennai</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h2>Precision Clamping Solutions</h2>
+  <p>Official Franchise of <b>Clamptek Taiwan</b> | Mechanical Cylinder & Industrial Clamping Solutions in Chennai. <br> <b>Our first priority is Time & Quality.</b></p>
+</section>
+
+<section id="products" class="section">
+  <h2 class="section-title">Our Products</h2>
+  <div class="products">
+
+    <div class="product-card">
+      <div class="product-inner">
+        <div class="product-face product-front">
+          <img src="https://via.placeholder.com/400x250" alt="Toggle Clamps">
+          <h3>Toggle Clamps</h3>
+        </div>
+        <div class="product-face product-back">
+          <p>High quality toggle clamps from Clamptek Taiwan.</p>
+          <button onclick="openPopup()">Get Quotation</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-inner">
+        <div class="product-face product-front">
+          <img src="https://via.placeholder.com/400x250" alt="Hydraulic Clamps">
+          <h3>Hydraulic Clamps</h3>
+        </div>
+        <div class="product-face product-back">
+          <p>Durable hydraulic clamping systems.</p>
+          <button onclick="openPopup1()">Get Quotation</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-inner">
+        <div class="product-face product-front">
+          <img src="https://via.placeholder.com/400x250" alt="Pneumatic Clamps">
+          <h3>Pneumatic Clamps</h3>
+        </div>
+        <div class="product-face product-back">
+          <p>Reliable pneumatic clamping solutions.</p>
+          <button onclick="openPopup2()">Get Quotation</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-inner">
+        <div class="product-face product-front">
+          <img src="https://via.placeholder.com/400x250" alt="Machining Services">
+          <h3>Machining Services</h3>
+        </div>
+        <div class="product-face product-back">
+          <p>Precision machining & mechanical cylinder manufacturing.</p>
+          <button onclick="openPopup3()">Get Quotation</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2 class="section-title">About Us</h2>
+  <div class="about-box">
+    <p><b>Clamptek Chennai</b> is an authorized franchise of <b>Clamptek Taiwan</b>, delivering world-class clamping and work-holding solutions for industrial applications.</p>
+    <p>We specialize in mechanical cylinders, toggle clamps, hydraulic clamps, pneumatic clamps, and machining services. Our products follow global quality standards as defined by Clamptek Taiwan.</p>
+    <p>Our philosophy is simple: <b>Time and Quality come first</b>. With industry-focused expertise and precision manufacturing, we support clients across India.</p>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <h2 class="section-title" style="color:#fff">Contact Us</h2>
+  <p>Email: <b>k9994270777</b></p>
+  <p>Location: Chennai, Tamil Nadu</p>
+</section>
+
+<footer>
+  © 2026 Clamptek Chennai | Franchise of Clamptek Taiwan
+</footer>
+
+
+<script>
+ 
+
+
+  function openPopup() {
+  const to = "k9994270777@gmail.com";
+  const subject = "quotation for toggle clamp";
+  const body = "This is a test email";
+
+    window.open(
+     `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`,
+      "_blank"
+  );
+  }
+
+
+function openPopup1() {
+  const to = "k9994270777@gmail.com";
+  const subject = "quotation for hydraulic clamps";
+  const body = "This is a test email";
+
+    window.open(
+     `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`,
+      "_blank"
+  );
+  }
+
+function openPopup2() {
+  const to = "k9994270777@gmail.com";
+  const subject = "quotation for pneumatic clamps";
+  const body = "This is a test email";
+
+    window.open(
+     `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`,
+      "_blank"
+  );
+  }
+
+function openPopup3() {
+  const to = "k9994270777@gmail.com";
+  const subject = "quotation for machining services";
+  const body = "This is a test email";
+
+    window.open(
+     `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`,
+      "_blank"
+  );
+  }
+
+
+</script>
+
+</body>
+</html>
